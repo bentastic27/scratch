@@ -12,9 +12,8 @@ spec:
     volumeMounts:
     - mountPath: /root
       name: root-volume
-    command: sleep
-    args:
-    - 3600
+    command: [ "/bin/bash", "-c", "--" ]
+    args: [ "while true; do sleep 30; done;" ]
   volumes:
   - name: root-volume
     hostPath:
