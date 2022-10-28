@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: root-vol
 spec:
-  nodeName: bdk8smaster003
+  nodeName: bdk8sworker070
   containers:
   - image: ubuntu
     name: ubuntu
