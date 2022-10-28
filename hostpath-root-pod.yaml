@@ -12,6 +12,7 @@ spec:
     volumeMounts:
     - mountPath: /root
       name: root-volume
+    command: sleep 3600
   volumes:
   - name: root-volume
     hostPath:
