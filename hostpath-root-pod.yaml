@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: root-vol
+spec:
+  nodeName: bdk8smaster003
+  containers:
+  - image: ubuntu
+    name: ubuntu
+    securityContext:
+       privileged: true
+    volumeMounts:
+    - mountPath: /root
+      name: root-volume
+  volumes:
+  - name: root-volume
+    hostPath:
+      path: /
+      type: Directory
